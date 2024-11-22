@@ -1,0 +1,18 @@
+server:
+  port: ${PORT:8080}
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: student
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://root:root1234@localhost:3306/library
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
